@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Main Branch') {
+        stage('Test Branch') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == 'main') {
-                        sh 'echo this is the main branch'
+                    if (env.BRANCH_NAME == 'testing') {
+                        sh 'echo this is a test branch'
                     }
                 }
             }
